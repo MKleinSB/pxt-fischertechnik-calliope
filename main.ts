@@ -90,6 +90,4 @@ namespace fischertechnik {
         pins.setPull(pin, PinPullMode.PullUp);
         pins.onPulsed(pin, <number>pushType.up, handler);
     }
-
-
 }
