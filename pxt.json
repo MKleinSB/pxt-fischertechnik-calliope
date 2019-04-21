@@ -1,7 +1,7 @@
 {
     "name": "pxt-fischertechnik-calliope",
     "version": "0.0.1",
-    "description": "",
+    "description": "Fischertechnikmodelle mit dem Calliope Mini einfacher ansteuern",
     "dependencies": {
         "core": "*",
         "radio": "*"

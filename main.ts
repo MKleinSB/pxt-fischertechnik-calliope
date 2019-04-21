@@ -21,9 +21,9 @@ const enum ftPins {
     C7 = 20,  //C7
     C8 = 21,  //C8
     C9 = 22,  //C9
-    P10 = 16, //C10
-    P11 = 14, //C11
-    P12 = 13 //C12
+    C10 = 16, //C10
+    C11 = 14, //C11
+    C12 = 13 //C12
 }
 
 enum pushType {
@@ -88,8 +88,6 @@ namespace fischertechnik {
     export function OnPinReleased(ftpin: ftPins, handler: Action) {
         const pin = <DigitalPin><number>ftpin;
         pins.setPull(pin, PinPullMode.PullUp);
-        pins.onPulsed(pin, <number>pushType.down, handler);
+        pins.onPulsed(pin, <number>pushType.up, handler);
     }
-
-
 }
