@@ -54,40 +54,67 @@ namespace fischertechnik {
         pins.setPull(pin, PinPullMode.PullUp);
         return pins.digitalReadPin(pin) == 0;
     }
+
     /**
     * Check if a specific pin is released
     * @param pin to be checked
     */
-    //% blockId="PinIsReleased" block="Pin %button|losgelassen"
+    //% blockId="PinIsReleased" block="Pin %ftpin|losgelassen"
     //% ftpin.fieldEditor="gridpicker" ftpin.fieldOptions.columns=5
-    //% weight=70 blockGap=8
+    //% weight=94 blockGap=8
     export function PinIsReleased(ftpin: ftPins): boolean {
         const pin = <DigitalPin><number>ftpin;
         pins.setPull(pin, PinPullMode.PullUp);
         return pins.digitalReadPin(pin) == 1;
     }
+
     /**
-    * Do something when one of the pins is pressed
+    * Define a pin to send up/down event messages.
+    * only necessary for OnPinPressed and OnPinReleased.
+    * Sets the pullmode for the pin Up.
+    * @param pin to be used as switch
+    */
+    //% blockId="PinAsSwitch" block="lege Pin %ftpin| als Schalter fest"
+    //% ftpin.fieldEditor="gridpicker" ftpin.fieldOptions.columns=5
+    //% weight=83 blockGap=8
+    export function PinAsSwitch(ftpin: ftPins) {
+        const pin = <DigitalPin><number>ftpin;
+        pins.setPull(pin, PinPullMode.PullUp);
+        return;
+    }
+
+    /**
+    * Do something when one of the pins is pressed.
+    * Use PinAsSwitch first!
     * @param pin to be checked
     */
     //% blockId="OnPinPressed" block="wenn Pin %ftpin | gedrückt"
     //% ftpin.fieldEditor="gridpicker" ftpin.fieldOptions.columns=5
-    //% weight=92 blockGap=8
+    //% weight=82 blockGap=8
     export function OnPinPressed(ftpin: ftPins, handler: Action) {
         const pin = <DigitalPin><number>ftpin;
-        pins.setPull(pin, PinPullMode.PullUp);
-        pins.onPulsed(pin, <number>pushType.up, handler);
+        //        pins.setPull(pin, PinPullMode.PullUp);
+        pins.onPulsed(pin, <number>pushType.down, handler);
     }
+
     /**
-    * Do something when one of the pins is released
+    * Do something when one of the pins is released.
+    * Use PinAsSwitch first!
     * @param pin to be checked
     */
     //% blockId="OnPinReleased" block="wenn Pin %ftpin | losgelassen"
     //% ftpin.fieldEditor="gridpicker" ftpin.fieldOptions.columns=5
-    //% weight=69 blockGap=8
+    //% weight=81 blockGap=8
     export function OnPinReleased(ftpin: ftPins, handler: Action) {
         const pin = <DigitalPin><number>ftpin;
-        pins.setPull(pin, PinPullMode.PullUp);
-        pins.onPulsed(pin, <number>pushType.down, handler);
+        //       pins.setPull(pin, PinPullMode.PullUp);
+        pins.onPulsed(pin, <number>pushType.up, handler);
+    }
+
+    /**
+     * Write a comment in MakeCode
+     */
+    //% blockId="comment" block="Kommentar %leerstring"
+    export function comment(text: string): void {
     }
 }
