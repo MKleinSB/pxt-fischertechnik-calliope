@@ -76,7 +76,7 @@ namespace fischertechnik {
     export function OnPinPressed(ftpin: ftPins, handler: Action) {
         const pin = <DigitalPin><number>ftpin;
         pins.setPull(pin, PinPullMode.PullUp);
-        pins.onPulsed(pin, <number>pushType.down, handler);
+        pins.onPulsed(pin, <number>pushType.up, handler);
     }
     /**
     * Do something when one of the pins is released
@@ -88,6 +88,6 @@ namespace fischertechnik {
     export function OnPinReleased(ftpin: ftPins, handler: Action) {
         const pin = <DigitalPin><number>ftpin;
         pins.setPull(pin, PinPullMode.PullUp);
-        pins.onPulsed(pin, <number>pushType.up, handler);
+        pins.onPulsed(pin, <number>pushType.down, handler);
     }
 }
