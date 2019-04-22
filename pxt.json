@@ -1,6 +1,6 @@
 {
     "name": "pxt-fischertechnik-calliope",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Easy access to Fischertechnik with the Calliope Mini",
     "dependencies": {
         "core": "*",
