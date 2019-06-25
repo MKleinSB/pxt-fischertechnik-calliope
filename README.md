@@ -36,6 +36,10 @@ Führt die eingeklammerten Blöcke aus, wenn ein Pin (Fischertechnik Schalter) l
 
 Endlich ein Kommentarblock wie bei NEPO von OpenRoberta!
 
+Wer den Fischertechnik Fototransistor ansteuern will, findet hier mein passendes Paket:
+
+https://github.com/MKleinSB/pxt-ft-fototransistor-calliope
+
 ## License
 
 MIT
@@ -43,5 +47,3 @@ MIT
 ## Supported targets
 
 * for PXT/calliope
-
-* for PXT/microbit
