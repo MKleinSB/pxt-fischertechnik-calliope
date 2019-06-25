@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/MKleinSB/pxt-fischertechnik-calliope.svg?branch=master)](https://travis-ci.org/MKleinSB/pxt-fischertechnik-calliope)
 
 Das fischertechnik-Paket für MakeCode und Calliope Mini http://makecode.calliope.cc stellt Blöcke zur Verfügung, die die Programmierung von Fischertechnik-Modellen https://www.fischertechnik.de am Calliope Mini vereinfachen sollen. So gibt es nun Eventblöcke für alle Pins (statt nur für P0-P3) oder ein Kommentarblock.
-Eine weitere Erleichterung ist die Fischertechnikerweiterung (Spoileralarm) für den Calliope Mini. Demnächst auf https://www.hackster.io/MKlein
+Eine weitere Erleichterung ist die Fischertechnikerweiterung für den Calliope Mini: https://www.hackster.io/MKlein/calliope-mini-und-fischertechnik-ff288d
 
 
 | ![Fischertechnik Blöcke](https://github.com/MKleinSB/pxt-fischertechnik-calliope/blob/master/pics/ft0.png "Fischertechnik Blöcke") | ![Erweiterung](https://github.com/MKleinSB/pxt-fischertechnik-calliope/blob/master/pics/ft00.png "Erweiterung") |
